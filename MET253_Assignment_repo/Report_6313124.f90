@@ -1,18 +1,24 @@
 Program Academic_report
 implicit none
-Integer, parameter:: maximum=100
-integer:: A
-integer:: i
-Do i=1,100
-IF(MARK >=80 .AND. MARK <=100)THEN
-PRINT*, 'A', 'distinction'
-ELSE IF(MARK >=60 .AND. MARK <=79) THEN
-PRINT*, 'B', 'credit'
-ELSE IF(MARK >=40 .AND. MARK <=59) THEN
-PRINT*, 'C', 'pass'
-ELSE IF(MARK >=0 .AND. MARK <=39) THEN
-PRINT*, 'F', 'fail'
+integer :: i
+real :: Marks(10)
+character(len=1) :: grade
+character(len=12) :: remark
+Marks = (/85, 62, 45, 91, 38, 74, 55, 88, 61, 47/)
+Print*, "Grade    Remarks"
+print*, "--------------------"
+Do i=1,10
+IF(MARK(i) >=80 .AND. MARK(i) <=100)THEN
+PRINT*, "A        DIstinction"
+ELSE IF(MARK(i) >=60 .AND. MARK(i) <=79) THEN
+PRINT*, "B        Credit"
+ELSE IF(MARK(i) >=40 .AND. MARK(i) <=59) THEN
+PRINT*, "C        Pass"
+ELSE IF(MARK(i) >=0 .AND. MARK(i) <=39) THEN
+PRINT*, "F        Fail"
 END IF 
+write(*,'(A1,"I3",A)')
+END DO
 END Program Academic_report
 !Lord Kwarteng Poku
 !6313124
